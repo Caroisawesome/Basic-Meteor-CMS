@@ -10,7 +10,7 @@ PostSchema = new SimpleSchema({
     },
 
     pageType: {
-        type: String
+        type: String,
         autoform: {
             options: () => _.values(OPTIONS.POSTS.PAGE_TYPES)            
         }
@@ -32,7 +32,7 @@ PostSchema = new SimpleSchema({
 
     columnWidth: {
         type: String,
-        defaultValue: OPTIONS.POSTS.COLUMNS_DEFAULT
+        defaultValue: OPTIONS.POSTS.COLUMNS_DEFAULT,
         autoform: {
             options: () => _.values(OPTIONS.POSTS.COLUMNS)
         }
