@@ -9,7 +9,8 @@ mobile-experience       # Packages for a great mobile UX
 mongo                   # The database Meteor supports right now
 blaze-html-templates    # Compile .html files into Meteor Blaze views
 session 
-less                
+less   
+            
 jquery                  # Helpful client-side library
 tracker 
 check                
@@ -30,3 +31,4 @@ aldeed:simple-schema
 aldeed:autoform
 kadira:flow-router
 dburles:collection-helpers
+fortawesome:fontawesome 

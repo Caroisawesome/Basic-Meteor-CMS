@@ -3,8 +3,9 @@
     <ul class="navbar-main">
         {{#each getPageList}}
             <li>
-                <a href="{{getUrl}}">{{this.title}}</a>
+                <a href="{{getUrl}}">{{this.title}}</a> {{> getLinkEdit}}
             </li>
         {{/each}}
+            <li>{{> getLinkAdd }}</li>
     </ul>
 </template>
