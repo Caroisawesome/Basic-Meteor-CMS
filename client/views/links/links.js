@@ -1,6 +1,6 @@
 const linkEvents = {
     'click icon': function(e, instance) {
-        FN.halt(e);
+        e.preventDefault();
         if (this.callback) this.callback(e, instance);
     }
 }

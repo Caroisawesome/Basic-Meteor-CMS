@@ -1,6 +1,11 @@
 get = {
     pageList: () => {
         return Pages.find().fetch();
+    },
+    currentPageId: () => {
+        const slug = FlowRouter.getParam("pageSlug");
+        const page = Pages.findOne({slug: slug});
+        return page ? page._id : 'NO PAGE FOUND';
     }
 };
 
@@ -19,7 +24,9 @@ if (Meteor.isClient) {
                         slidePanel.showPanel('newPageForm')
                     },
 
-                    post: () => {}
+                    post: () => {
+                        slidePanel.showPanel('newPostForm')
+                    }
                 },
 
                 edit: {
