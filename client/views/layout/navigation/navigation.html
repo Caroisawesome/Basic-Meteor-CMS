@@ -1,0 +1,10 @@
+<template name="PageNavigationLinks">
+
+    <ul class="navbar-main">
+        {{#each getPageList}}
+            <li>
+                <a href="{{getUrl}}">{{this.title}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</template>
