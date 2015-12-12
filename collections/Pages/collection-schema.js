@@ -2,7 +2,8 @@ Pages = new Mongo.Collection(COLLECTION.PAGES);
 
 PageSchema = new SimpleSchema({
     _userId: {
-        type: String
+        type: String,
+        defaultValue: 'temporary-no-user'
     },
 
     title: {
@@ -14,7 +15,8 @@ PageSchema = new SimpleSchema({
     },
 
     _order: {
-        type: Number
+        type: Number,
+        defaultValue: 1
     },
 
     containerWidth: {
