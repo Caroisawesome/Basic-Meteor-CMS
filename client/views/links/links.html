@@ -1,7 +1,7 @@
 <template name="getLinkAdd">
-    <a href="#"><icon class="fa fa-plus">{{#if this.text}}{{this.text}}{{/if}}</icon></a>
+    <icon class="icon-link fa fa-plus" title="{{#if this.title}}{{this.title}}{{else}}add new{{/if}}">{{#if this.text}}{{this.text}}{{/if}}</icon>
 </template>
 
 <template name="getLinkEdit">
-    <a href="#"><icon class="fa fa-pencil">{{#if this.text}}{{this.text}}{{/if}}</icon></a>
+    <icon class="icon-link fa fa-pencil" title="{{#if this.title}}{{this.title}}{{else}}edit{{/if}}">{{#if this.text}}{{this.text}}{{/if}}</icon>
 </template>

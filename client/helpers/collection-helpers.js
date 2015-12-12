@@ -6,3 +6,8 @@ Template.registerHelper('getPageList', () => {
 Template.registerHelper('showFormForNewPage', () => {
     return show.form.for.new.page;
 });
+
+
+Template.registerHelper('showFormForNewPost', () => {
+    return show.form.for.new.post;
+});

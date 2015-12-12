@@ -2,17 +2,24 @@ Posts = new Mongo.Collection(COLLECTION.POSTS);
 
 PostSchema = new SimpleSchema({
     _pageId: {
-        type: String
+        type: String,
+        autoform: {
+            type: 'hidden'
+        }
     },
 
     _userId: {
-        type: String
-    },
-
-    pageType: {
         type: String,
         autoform: {
-            options: () => _.values(OPTIONS.POSTS.PAGE_TYPES)            
+            type: 'hidden',
+            value: () => Meteor.userId() || 'no-user'
+        }
+    },
+
+    postType: {
+        type: String,
+        autoform: {
+            options: () => _.values(OPTIONS.POSTS.POST_TYPES)            
         }
     },
 
