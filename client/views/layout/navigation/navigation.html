@@ -1,11 +1,10 @@
 <template name="PageNavigationLinks">
-
-    <ul class="navbar-main">
+    <ul class="nav nav-tabs">
         {{#each getPageList}}
-            <li>
-                <a href="{{getUrl}}">{{this.title}}</a> {{> getLinkEdit}}
+            <li role="presentation">
+                <a href="{{getUrl}}">{{this.title}} {{> getLinkEdit}}</a> 
             </li>
         {{/each}}
-            <li>{{> getLinkAdd callback=showFormForNewPage }}</li>
+            <li><a href="#">{{> getLinkAdd callback=showFormForNewPage }}</a></li>
     </ul>
 </template>

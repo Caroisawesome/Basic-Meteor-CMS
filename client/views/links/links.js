@@ -1,5 +1,6 @@
 const linkEvents = {
-    'click a': function(e, instance) {
+    'click icon': function(e, instance) {
+        FN.halt(e);
         if (this.callback) this.callback(e, instance);
     }
 }

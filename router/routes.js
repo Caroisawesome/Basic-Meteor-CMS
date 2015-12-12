@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
     name: 'home',
-    action: (params,) => {
+    action: (params) => {
         BlazeLayout.render("MainLayout", {
             header: "Header", 
             content: "MainContent",
@@ -9,8 +9,21 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/:page-slug', {
-    name: 'page'
+FlowRouter.route('/:pageSlug', {
+    name: 'page',
+    action: (params) => {
+        const page = Pages.findOne({ slug: params.pageSlug });
+
+        if (page) {
+            BlazeLayout.render("MainLayout", {
+                header: "Header", 
+                content: "MainContent",
+                footer: "Footer"
+            });
+        } else {
+            BlazeLayout.render('notFound');
+        }
+    }
 
 })
 
