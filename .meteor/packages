@@ -10,7 +10,7 @@ mongo                   # The database Meteor supports right now
 blaze-html-templates    # Compile .html files into Meteor Blaze views
 session 
 less   
-            
+
 jquery                  # Helpful client-side library
 tracker 
 check                
@@ -32,3 +32,6 @@ aldeed:autoform
 kadira:flow-router
 dburles:collection-helpers
 fortawesome:fontawesome 
+rosh93:slide-panel
+twbs:bootstrap
+comerc:autoform-selectize

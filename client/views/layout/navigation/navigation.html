@@ -6,6 +6,6 @@
                 <a href="{{getUrl}}">{{this.title}}</a> {{> getLinkEdit}}
             </li>
         {{/each}}
-            <li>{{> getLinkAdd }}</li>
+            <li>{{> getLinkAdd callback=showFormForNewPage }}</li>
     </ul>
 </template>

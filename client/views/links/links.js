@@ -8,6 +8,6 @@ Template.getLinkAdd.events(_.extend({
 
 },linkEvents));
 
-Template.getLinkEdit.events(_.entend({
-    
+Template.getLinkEdit.events(_.extend({
+
 },linkEvents));
