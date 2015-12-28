@@ -2,7 +2,7 @@
     <ul class="nav nav-tabs">
         {{#each getPageList}}
             <li role="presentation">
-                <a href="{{getUrl}}">{{this.title}} {{> getLinkEdit}}</a> 
+                <a href="{{getUrl}}">{{this.title}} {{> getLinkEdit callback=showFormForEditPage}}</a> 
             </li>
         {{/each}}
             <li><a href="#">{{> getLinkAdd callback=showFormForNewPage }}</a></li>

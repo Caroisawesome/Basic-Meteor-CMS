@@ -1,5 +1,5 @@
 <template name="newPageForm">
-    {{#autoForm collection="Pages" type="insert" id="newPageForm"}}
+    {{#autoForm collection="Pages" type=formType id="newPageForm" doc=doc}}
         <fieldset>
           <legend>Add a Page</legend>
           {{> afQuickField name='title'}}
@@ -8,3 +8,4 @@
         <button type="submit" class="btn btn-primary">Save</button>
     {{/autoForm}}
 </template>
+
