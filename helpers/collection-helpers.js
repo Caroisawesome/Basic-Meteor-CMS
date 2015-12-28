@@ -50,6 +50,7 @@ if (Meteor.isClient) {
         confirmation: {
             remove: {
 		page: () => {
+		    console.log('REMOVE PAGE');
 		},
 
 		post: () => {
