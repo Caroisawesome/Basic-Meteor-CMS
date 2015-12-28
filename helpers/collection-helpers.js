@@ -20,30 +20,41 @@ if (Meteor.isClient) {
         form: { 
             for: {
                 new: {
-                    page: () => {
+                    page() {
                         slidePanel.showPanel('newPageForm')
                     },
 
-                    post: () => {
+                    post() {
                         slidePanel.showPanel('newPostForm')
                     }
                 },
 
                 edit: {
-                    siteTitle: () => {
-                        slidePanel.showPanel('template', data);
+                    siteTitle() {
+                        slidePanel.showPanel('editSiteTitleForm');
                     },
 
-                    navigationLinks: () => {
-                        slidePanel.showPanel(template, data);
-                    }
+                    page() {
+                        slidePanel.showPanel('newPageForm', {page: this});
+                    },
+
+		    post() {
+			console.log('THISHIS', this);
+			slidePanel.showPanel('newPostForm', {post: this});
+		    },
                 }
             }
 
         },
 
         confirmation: {
-            remove: {}
+            remove: {
+		page: () => {
+		},
+
+		post: () => {
+		},
+	    }
         }
     };
 
