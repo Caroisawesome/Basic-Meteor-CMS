@@ -6,6 +6,12 @@
           {{> afQuickField name='slug'}}
         </fieldset>
         <button type="submit" class="btn btn-primary">Save</button>
-    {{/autoForm}}
+	{{/autoForm}}
+
+	{{#if this.page}}
+	{{> getLinkRemove text="Remove Page" callback=showConfirmationRemovePage }}
+	{{/if}}
+
+
 </template>
 
