@@ -25,6 +25,7 @@ Template.registerHelper('showFormForEditPage', function() {
 });
 
 Template.registerHelper('showConfirmationRemovePage', function() {
+    console.log('UI HELPER THIS', this);
     return show.confirmation.remove.page.bind(this);
 });
 
