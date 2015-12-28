@@ -1,0 +1,13 @@
+<template name="newPostForm">
+    {{#autoForm collection="Posts" type=formType id="newPostForm" doc=doc }}
+        <fieldset>
+          <legend>Add a Post</legend>
+          {{> afQuickField name='postType'}}
+          {{> afQuickField name='content'}}
+          {{> afQuickField name='columnWidth'}}
+          {{> afQuickField name='_pageId' value=getCurrentPageId }}
+          {{> afQuickField name='_userId'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Save</button>
+    {{/autoForm}}
+</template>

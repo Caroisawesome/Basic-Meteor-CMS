@@ -1,0 +1,12 @@
+<template name="MainContent">
+    <div class="container content">
+        <h2>{{getPageTitle}}</h2>
+	<div class="row">
+          {{#each pagePosts }}
+          {{> Template.dynamic template=this.postType data=this }}
+          {{/each}}
+
+          {{> getLinkAdd callback=showFormForNewPost}}
+	</div>
+    </div>
+</template>
