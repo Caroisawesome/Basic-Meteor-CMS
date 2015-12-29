@@ -9,5 +9,11 @@
           {{> afQuickField name='_userId'}}
         </fieldset>
         <button type="submit" class="btn btn-primary">Save</button>
-    {{/autoForm}}
+	{{/autoForm}}
+
+	{{#if this.post}}{{#with doc}}
+	{{> getLinkRemove text="Remove Post" callback=showConfirmationRemovePost }}
+	{{/with}}
+	{{/if}}
+
 </template>

@@ -6,6 +6,9 @@ get = {
         const slug = FlowRouter.getParam("pageSlug");
         const page = Pages.findOne({slug: slug});
         return page ? page._id : 'NO PAGE FOUND';
+    },
+    post(id) {
+	return Posts.findOne(id);
     }
 };
 
@@ -17,6 +20,10 @@ set = {
 remove = {
     page(id) {
 	Pages.remove({_id: id});
+    },
+
+    post(id) {
+	Posts.remove({_id: id});
     }
 }
 
@@ -56,10 +63,7 @@ if (Meteor.isClient) {
         confirmation: {
             remove: {
 		page() {
-		    console.log('this', this);
 		    const pageId = this._id;
-		    console.log('PAGEID', pageId);
-
 		    new Confirmation({
 			message: "Are you sure you would like to remove this page?",
 			title: "Remove Page",
@@ -73,6 +77,17 @@ if (Meteor.isClient) {
 		},
 
 		post() {
+		    const postId = this._id;
+		    new Confirmation({
+			message: "Are you sure you would like to remove this post?",
+			title: "Remove Post",
+			cancelText: "Cancel",
+			okText: "Ok",
+			success: true
+		    }, function (ok) {
+			remove.post(postId);
+			slidePanel.closePanel();			
+		    });
 		},
 	    }
         }
