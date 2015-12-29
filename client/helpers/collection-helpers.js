@@ -3,6 +3,10 @@ Template.registerHelper('getPageList', function() {
     return get.pageList();
 });
 
+Template.registerHelper('showFormForEditSiteTitle', function() {
+    return show.form.for.edit.siteTitle;
+});
+
 Template.registerHelper('showFormForNewPage', function() {
     return show.form.for.new.page;
 });
@@ -25,7 +29,6 @@ Template.registerHelper('showFormForEditPage', function() {
 });
 
 Template.registerHelper('showConfirmationRemovePage', function() {
-    console.log('UI HELPER THIS', this);
     return show.confirmation.remove.page.bind(this);
 });
 

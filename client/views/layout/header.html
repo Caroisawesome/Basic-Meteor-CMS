@@ -1,7 +1,7 @@
 <template name="Header">
     <div class="container">
         <header>
-            <h1>Site Title {{> getLinkEdit}} </h1>
+            <h1>Site Title {{> getLinkEdit callback=showFormForEditSiteTitle }} </h1>
 
             {{> PageNavigationLinks }}
         </header>

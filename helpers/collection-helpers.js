@@ -52,7 +52,7 @@ if (Meteor.isClient) {
                     },
 
 		    post() {
-			console.log('THISHIS', this);
+			console.log('show form for edit post', this);
 			slidePanel.showPanel('newPostForm', {post: this});
 		    },
                 }

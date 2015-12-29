@@ -11,3 +11,6 @@ Template.newPostForm.helpers({
 	return !!this.post ? Posts.findOne(this.post._id): {};
     }
 });
+
+
+

@@ -9,6 +9,14 @@ FlowRouter.route('/', {
     }
 });
 
+
+FlowRouter.route('/admin', {
+    name: 'admin',
+    action: (params) => {
+	BlazeLayout.render("signIn");
+    }
+});
+
 FlowRouter.route('/:pageSlug', {
     name: 'page',
     action: (params) => {

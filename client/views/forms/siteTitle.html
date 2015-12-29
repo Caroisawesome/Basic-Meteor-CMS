@@ -1,0 +1,9 @@
+<template name="editSiteTitleForm">
+    {{#autoForm collection="Sites" type="update" id="editSiteTitle" }}
+        <fieldset>
+          <legend>Edit site title</legend>
+          {{> afQuickField name='title'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Save</button>
+	{{/autoForm}}
+</template>
